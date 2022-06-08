@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbWSljmvyhQmPDxoOpilO3a1XLKSew91DThA&usqp=CAU">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/9d6433328b.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="/style.css" />
+        <title>MovieDecoder</title>
+      </head>
+      <body>
+        <div onclick="homepage()" id="heading">MovieDecoder<span class="com">.com</span></div>
+        <div id="searchbar">
+          <i class="fa-solid fa-bars" onclick="openHam()"></i>
+          <div id="ham" class="ham-menu">
+            <i class="fa-solid fa-xmark" onclick="closeHam()"></i>
+            <ul>
+              <li onclick="homepage()">Home</li>
+              <hr>
+              <li onclick="trending()">Popular</li>
+              <hr>
+              <li>Top Rated</li>
+              <hr>
+              <li>Upcoming</li>
+              <!-- <hr> -->
+            </ul>
+          </div>
+          <ul>
+            <li id="popular" onclick="trending()">Popular</li>
+            <li id="release">Top Rated</li>
+            <li id="upcoming">Upcoming</li>
+          </ul>
+          <div class="src-icon">
+            <input
+            type="text"
+            id="search"
+            class="form-control"
+            oninput="debounce(main, 1000)"
+            autocomplete="off"
+            suggestion="off"
+            placeholder="Enter Movie Name..."
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+            <div id="movie-list"></div>
+        </div>
+
+            <div id="single-movie">
+            </div>
+        </div>
+    </body>
+</html>
+<script src="/script.js"></script>

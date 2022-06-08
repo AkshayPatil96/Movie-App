@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/9d6433328b.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="/trending.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div onclick="homepage()" id="heading"><p>MovieDecoder<span class="com">.com</span></p></div>
+        <div id="searchbar">
+
+            <!-- Ham menu for mobile view -->
+
+            <i class="fa-solid fa-bars" onclick="openHam()"></i>
+          <div id="ham" class="ham-menu">
+            <i class="fa-solid fa-xmark" onclick="closeHam()"></i>
+            <ul>
+                <li onclick="homepage()">Home</li>
+                <hr>
+              <li onclick="trendingMovies()">Popular</li>
+              <hr>
+              <li onclick="latest()">Top Rated</li>
+              <hr>
+              <li onclick="upcoming()">Upcoming</li>
+              <!-- <hr> -->
+            </ul>
+          </div>
+
+          <!-- Menu for decktop view -->
+
+          <ul>
+            <li id="popular" onclick="trendingMovies()">Popular</li>
+            <li id="release" onclick="latest()">Top Rated</li>
+            <li id="upcoming" onclick="upcoming()">Upcoming</li>
+          </ul>
+          <div class="src-icon">
+
+              <input
+              type="text"
+              id="search"
+              class="form-control"
+              oninput="debounce(main, 1000)"
+              autocomplete="off"
+              suggestion="off"
+              placeholder="Enter Movie Name..."
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+              <div id="movie-list"></div>
+            </div>
+            
+            <!-- Popular movies -->
+            <div id="trend">
+            <!-- <div class="single-movie">
+                <img
+                    src="https://www.themoviedb.org/t/p/w220_and_h330_face/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
+                    alt=""
+                />
+                <p class="name">Spider man Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam quos fugiat voluptas corrupti quam maiores voluptates ad corporis eius eveniet vitae odio, pariatur atque.</p>
+                <div class="date-rating">
+                    <p class="date">15 dec 2021</p>
+                    <p class="rating">8/10</p> -->
+                    <!-- <input type="range" min="0" max="10" id="slider"> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="pto">
+          <div class="next">
+            <li><i class="fa-solid fa-angle-left"></i></li>
+            <li id="1">1</li>
+            <li id="2">2</li>
+            <li id="3">3</li>
+            <li id="4">4</li>
+            <li id="5">5</li>
+            <li><i class="fa-solid fa-angle-right"></i></li>
+          </div>
+        </div> -->
+    </body>
+</html>
+<script src="/trending.js"></script>
